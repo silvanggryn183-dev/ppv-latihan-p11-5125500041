@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catatan Kuliah — Kode Latihan P11</title>
+  <style>
+    body { margin: 0; font-family: system-ui, "Segoe UI", sans-serif; background: #f5f7fa; color: #1d2430; }
+    header { background: #1f3b63; color: #fff; padding: 12px 16px; }
+    header h1 { margin: 0; font-size: 1.2rem; }
+    main { max-width: 720px; margin: 0 auto; padding: 16px; }
+    form, .cari { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    input, select, button { font: inherit; padding: 8px 10px; border-radius: 6px; border: 1px solid #c4cad3; }
+    button { cursor: pointer; }
+    form button { background: #2f7de1; color: #fff; border: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .kartu { background: #fff; border-radius: 8px; padding: 10px 12px; box-shadow: 0 1px 2px #0000001a; }
+    .kartu h3 { margin: 4px 0; font-size: 1rem; overflow-wrap: anywhere; }
+    .kartu small { color: #5b6470; }
+    .kartu .aksi { display: flex; gap: 6px; margin-top: 8px; }
+    .kartu .aksi button { padding: 4px 8px; font-size: .85rem; }
+    .kosong { color: #5b6470; }
+  </style>
+</head>
+<body>
+  <header><h1>Catatan Kuliah</h1></header>
+  <main>
+    <form id="form">
+      <input id="judul" placeholder="Judul catatan" aria-label="Judul catatan" required>
+      <select id="mk" aria-label="Mata kuliah">
+        <option>Pemrograman Visual</option>
+        <option>Animasi 2D</option>
+        <option>Elektronika dan Instrumentasi</option>
+      </select>
+      <button type="submit">Simpan</button>
+    </form>
+    <div class="cari"><input id="cari" type="search" placeholder="Cari catatan…" aria-label="Cari catatan"></div>
+    <p id="info"></p>
+    <h2>Disematkan</h2>
+    <div id="sematan" class="grid"></div>
+    <h2>Semua catatan</h2>
+    <div id="semua" class="grid"></div>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
