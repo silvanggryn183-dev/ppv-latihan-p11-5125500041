@@ -1,10 +1,12 @@
 import { tambah, alihSemat, hapus, cari } from './state.js';
 import { render } from './ui.js';
+import { penyimpananAman } from './storage.js';
 
 let kataCari = '';
 
 function segarkan() {
   render(cari(kataCari));
+  document.getElementById('peringatan').hidden = penyimpananAman();
 }
 
 document.getElementById('form').addEventListener('submit', (e) => {
